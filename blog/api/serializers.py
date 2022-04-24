@@ -47,7 +47,7 @@ class RegisterSerializer(serializers.ModelSerializer):
         if not validate_email(email):
             raise serializers.ValidationError({"username": "Введите E-mail"})
 
-        user = User(email=email)
+        user = User(username=email)
         user.set_password(password)
         user.save()
         return user
