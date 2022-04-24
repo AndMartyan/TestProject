@@ -1,0 +1,1 @@
+email-validator - https://pypi.org/project/email-validator/
