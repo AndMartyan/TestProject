@@ -8,7 +8,6 @@
 <h3 align="center">
 The division of users into a subscriber / author occurs in the Django administrative panel, with the issuance of the appropriate permissions</h3>
 <h3 align="center">This is an example input for creating a post:         {
-            "id": 1,
             "title": "Backend development",
             "body": "Content",
             "is_private": true
