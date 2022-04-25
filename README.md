@@ -4,6 +4,7 @@
 <h3 align="center">This is my test task for the junior backend developer position.</h3>
 <h3 align="center">/register - Registration of new users, you must enter an email and a password of at least 8 characters, where 1 of them is a letter in any case.</h3>
 <h3 align="center">/posts - post view mode, for unauthorized users only non-private, for authorized all posts, as well as for creating posts by authors.</h3>
+<h3 align="center">/posts/[id] - post editing mode, you can choose between private and non-private messages</h3>
 <h3 align="center">/users - view all registered users and posts created by them.</h3>
 <h3 align="center">
 The division of users into a subscriber / author occurs in the Django administrative panel, with the issuance of the appropriate permissions</h3>
