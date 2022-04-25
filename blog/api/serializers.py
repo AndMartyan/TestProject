@@ -36,9 +36,15 @@ class RegisterSerializer(serializers.ModelSerializer):
         email = validated_data["email"]
         password = validated_data["password"]
         password2 = validated_data["password2"]
+        good = 0
+        for element in password:
+            if element.isalpha():
+                good += 1
 
-        if (len(password)) < 8 and password != (
-                r'^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$'):
+        if (len(password)) < 8:
+            raise serializers.ValidationError({"password": "Пароль должен содержать 8 символов и букву верхнего или "
+                                                           "нижнего регистров"})
+        if good == 0:
             raise serializers.ValidationError({"password": "Пароль должен содержать 8 символов и букву верхнего или "
                                                            "нижнего регистров"})
         if password != password2:
